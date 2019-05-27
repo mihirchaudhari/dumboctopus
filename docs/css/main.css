@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Quicksand');
+
+/* General Styling */
+body {margin: 0; padding: 0; background-color: #1D293F}
+p, h1, h2, h3, h4, h5, h6 {margin: 0; font-family: "Open Sans Condensed", sans-serif}
+p {font-family: "Quicksand", sans-serif}
+h1 {color: #239CED; font-weight: bold}
+hr {padding: 0; margin: 4px 0 4px 0; border: none; height: 1px; background-color: #ccc}
+
+.computer {display: none}
+
+/* Card Styling */
+.card-wrapper {
+	display: grid;
+	padding: 16px;
+	grid-template-rows: 1fr;
+	grid-template-columns: 1fr;
+	grid-column-gap: 16px;
+	grid-row-gap: 16px;
+}
+
+.card {
+	padding: 8px;
+	background-color: #F3F6F4 /* Fix this color */;
+	border-radius: 8px;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25)
+}
+
+.card p {
+	padding: 8px
+}
+
+/* Slideshow Styling */
+.slideshow {
+	display: flex;
+	justify-content: center;
+	position: relative;
+	background-color: #000;
+	width: 100%;
+	height: 45vh;
+	overflow: hidden
+}
+/* Slideshow button */
+.slideshow button {
+	padding: 16px;
+	width: 64px;
+	height: 64px;
+	border: none;
+	background-color: #000a;
+	position: absolute;
+	top: calc(50% - 32px);
+	cursor: pointer;
+	z-index: 1
+}
+
+.slideshow button.left {
+	left: 0
+}
+
+.slideshow button.right {
+	right: 0
+}
+
+.slideshow button hr {
+	background-color: #F3F6F4;
+	position: relative;
+	transition: 0.3s;
+}
+
+.slideshow button.left hr:nth-child(1) {transform: translateY(-9px) rotate(-45deg)}
+.slideshow button.left hr:nth-child(2) {transform: translateY(9px) rotate(45deg)}
+
+.slideshow button.right hr:nth-child(1) {transform: translateY(-9px) rotate(45deg)}
+.slideshow button.right hr:nth-child(2) {transform: translateY(9px) rotate(-45deg)}
+/* Slideshow Images */
+.slideshow .slide {
+	display: block;
+	position: absolute;
+	height: 100%;
+	opacity: 0;
+	transition: 0.3s
+}
+
+.slideshow .slide.visible {
+	position: relative;
+	opacity: 1;
+}
+
+/* Head Styling */
+#head {
+	display: flex;
+	background-color: #F3F6F4;
+}
+
+#head .text {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 50%;
+}
+
+#head .text h1 {
+	font-size: 64px
+}
+
+#head .image {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 50%;
+}
+
+/* Computer Styling */
+@media screen and (min-width: 540px) {
+	.mobile {display: none}
+	.computer {display: block}
+	#head {height: 50vw}
+	/* Slideshow button hover styling */
+	.slideshow button.left:hover hr:nth-child(1) {transform: translateY(-6px) rotate(-30deg)}
+	.slideshow button.left:hover hr:nth-child(2) {transform: translateY(6px) rotate(30deg)}
+	.slideshow button.right:hover hr:nth-child(1) {transform: translateY(-6px) rotate(30deg)}
+	.slideshow button.right:hover hr:nth-child(2) {transform: translateY(6px) rotate(-30deg)}
+	/* Parallax */
+	.parallax {
+		overflow: hidden
+	}
+}

@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Dumbo Octopus</title>
+	<script type="text/javascript" src="/docs/js/jquery.js" defer></script>
+	<script type="text/javascript" src="/docs/js/main.js" defer></script>
+	<link type="text/css" rel="stylesheet" href="/docs/css/main.css">
+	<style>
+
+	/* Mjir Math Ad */
+	#ad {display:flex; justify-content:center; align-items:center; background-color:#239CED; transition: 0.3s}
+
+	/* Card Styling */
+	.card-wrapper {
+		grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+		grid-template-columns: 1fr;
+	}
+
+	/* Computer Styling */
+	@media screen and (min-width: 540px) {
+		#ad:hover {background-color: #208ED8}
+
+		/* Card Styling */
+		.card-wrapper {
+			grid-template-columns: 1fr 1fr 1fr;
+			grid-template-rows: 1fr 1fr 1fr
+		}
+		.card-wrapper:nth-child(2) .card:nth-child(1) {
+			grid-column: 1;
+			grid-row: 1 / 3
+		}
+		.card-wrapper:nth-child(2) .card:nth-child(2) {
+			grid-column: 2;
+			grid-row: 1
+		}
+		.card-wrapper:nth-child(2) .card:nth-child(3) {
+			grid-column: 3;
+			grid-row: 1 / 4
+		}
+		.card-wrapper:nth-child(2) .card:nth-child(4) {
+			grid-column: 2;
+			grid-row: 2
+		}
+		.card-wrapper:nth-child(2) .card:nth-child(5) {
+			grid-column: 1 / 3;
+			grid-row: 3
+		}
+
+		.card-wrapper:nth-child(2) .card:nth-child(2) img {
+			transition: 0.3s
+		}
+
+		.card-wrapper:nth-child(2) .card:nth-child(2) img:hover {
+			transform: scale(0.95)
+		}
+	}
+
+	@font-face {
+		font-family: "Major Mono Display";
+		src: url("/docs/fonts/Major_Mono_Display/MajorMonoDisplay-Regular.ttf")
+	}
+	</style>
+</head>
+<body>
+	<div id="top-nav"></div>
+	<div class="parallax" autoheight="50vw">
+		<div id="head">
+			<div class="image">
+				<div class="img-wrapper" style="padding:16px;border-radius:50%;box-shadow:0 1px 3px rgba(0,0,0,0.25);width:50%">
+					<img src="/images/svgs/dumbo_octopus_blue.svg" width="100%" style="display:block">
+				</div>
+			</div>
+			<div class="text">
+				<h1>Simple Web Design</h1>
+				<p>Can still look pretty cool</p>
+			</div>
+		</div>
+	</div>
+	<div class="no-parallax" autoheight="auto">
+		<video src="https://media.githubusercontent.com/media/Dumboctopus/dumboctopus.github.io/master/videos/dumbo_octopus.mp4" width="100%" controls></video>
+		<div class="card-wrapper">
+			<div class="card">
+				<h1>Design with Dumbo Octopus</h1>
+				<hr>
+				<p>Dumbo Octopus is a website about design and secrets created by Mihir for his math project. A lot of time and effort to every aspect was put into the website, so I hope you enjoy it!</p>
+				<p>The goal for this project is to simply create a website with good design. To complete this task, I am taking the help of a professional and some other sources to make a website that has good design. Oh, but how does it involve math? Many things on this website use the golden ratio, and you can read about that by going to the navigation. Dumbo Octopus is basically the theme of the website, but it is mainly going to be about design.</p>
+			</div>
+			<div class="card" style="display:flex;justify-content:space-around;align-items:center">
+				<img src="/images/svgs/elephant.svg" width="64px">
+				<p style="font-size:64px">+</p>
+				<img src="/images/svgs/octopus.svg" width="64px">
+				<p style="font-size:64px">=</p>
+				<img src="/images/svgs/dumbo_octopus_blue.svg" width="64px">
+			</div>
+			<div id="ad" class="card">
+				<a href="https://mjirmath.github.io" style="text-decoration:none;color:#F3F6F4" target="_blank">
+					<p style="font-size:32px;font-family:'Major Mono Display',sans-serif">MJIR</p>
+					<p style="font-size:32px;font-family:'Major Mono Display',sans-serif">MATH</p>
+				</a>
+			</div>
+			<div class="card">
+				<p style="color:#f4f6f3">Wow, you thought nothing was here... that is just mean</p>
+			</div>
+			<div class="card">
+				<h1>The Dumbo Octopus</h1>
+				<hr>
+				<p>The Dumbo Octopus is a very ingriguing animal. They are naturally rare, like shiny Pokemon, and can mate any time they see another one of their kind. One could say that they are reclusive, but how are we to know the vast unknowns of the deep-sea abyss. Yes, the Dumbo Octopus lives very low, at least 4000 meters, and that is just the least, they probably all live way deeper. They are so chill that they don't have ink sacs because there be no predators down there. <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" style="text-decoration:none;color:#000" target="_blank">There</a> giant ears are what they use for propulsion, and they fly underwater just like Dumbo can fly, because he is a fly boi. Other than that, not much else is known about the dumbo octoups, it is truly magnificent and very intriguing.</p>
+			</div>
+		</div>
+		<div class="slideshow">
+			<button class="left" onclick="nextSlide(this, -1)">
+				<hr>
+				<hr>
+			</button>
+			<img class="slide visible" src="/images/dumbo_octopuses/orange_dumbo_octopus.jpg">
+			<img class="slide hidden" src="/images/dumbo_octopuses/sea_floor_dumbo_octopus.jpg">
+			<img class="slide hidden" src="/images/dumbo_octopuses/close_up_dumbo_octopus.jpg">
+			<img class="slide hidden" src="/images/dumbo_octopuses/purple_dumbo_octopus.png">
+			<button class="right" onclick="nextSlide(this, 1)">
+				<hr>
+				<hr>
+			</button>
+		</div>
+	</div>
+	<div id="woah">
+		<p><a href="/extrapolate/" style="text-decoration:none;color:#1D293F;cursor:default">You cheated to find this</a></p>
+	</div>
+</body>
+</html>

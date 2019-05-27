@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Design</title>
+	<script type="text/javascript" src="/docs/js/jquery.js" defer></script>
+	<script type="text/javascript" src="/docs/js/main.js" defer></script>
+	<link type="text/css" rel="stylesheet" href="/docs/css/main.css">
+	<style>
+		.card .images img {
+			margin: 8px;
+			border-radius: 4px;
+			box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+		}
+		/* Layout and composition Styling */
+		@media screen and (min-width: 540px) {
+			#layout-comp {
+				grid-template-columns: auto 1fr 1fr;
+				grid-template-rows: 1fr 1fr 1fr;
+			}
+			#layout-comp :nth-child(1) {
+				grid-column: 1;
+				grid-row: 1 / 3
+			}
+			#layout-comp :nth-child(6) {
+				grid-column: 1 / 4;
+			}
+			.computer {display: flex}
+			.card .images img {
+				position: relative;
+				width: 50%;
+				transition: 0.3s;
+				z-index: 1
+			}
+			.card .images img:hover {transform: scale(0.95)}
+			.card .images {display: flex;}
+		}
+	</style>
+</head>
+<body>
+	<div id="top-nav"></div>
+	<div class="parallax" autoheight="50vw">
+		<div id="head">
+			<div class="image">
+				<img src="/images/stuff/compass_hand.jpg" width="100%" style="display:block">
+			</div>
+			<div class="text">
+				<h1>Design</h1>
+				<p>Simple Concepts</p>
+				<p>Complex Products</p>
+			</div>
+		</div>
+	</div>
+	<div class="no-parallax">
+		<div id="layout-comp" class="card-wrapper" style="background-color: #1D293F">
+			<div class="text">
+				<div class="mobile">
+					<p style="font-size:32px;color:#F3F6F4;word-wrap-:break-word">LAYOUT & COMPOSITION</p>
+				</div>
+				<div class="computer">
+					<p style="font-size:64px;width:48px;word-wrap:break-word;color:#F3F6F4;margin:8px">LAYOUT &</p>
+					<p style="font-size:64px;width:48px;word-wrap:break-word;color:#F3F6F4;margin:8px">COMPOSITION</p>
+				</div>
+			</div>
+			<div class="card">
+				<h1>Proximity</h1>
+				<hr>
+				<div class="images">
+					<img src="/images/svgs/proximity_bad.svg">
+					<img src="/images/svgs/proximity_good.svg">
+				</div>
+			</div>
+			<div class="card">
+				<h1>White Space</h1>
+				<hr>
+				<div class="images">
+					<img src="/images/svgs/whitespace_bad.svg">
+					<img src="/images/svgs/whitespace_good.svg">
+				</div>
+			</div>
+			<div class="card">
+				<h1>Alignment</h1>
+				<hr>
+				<div class="images">
+					<img src="/images/svgs/alignment_bad.svg">
+					<img src="/images/svgs/alignment_good.svg">
+				</div>
+			</div>
+			<div class="card">
+				<h1>Contrast</h1>
+				<hr>
+				<div class="images">
+					<img src="/images/svgs/contrast_bad.svg">
+					<img src="/images/svgs/contrast_good.svg">
+				</div>
+			</div>
+			<div class="card">
+				<h1>Repetition</h1>
+				<hr>
+				<p>Repetition is something you here everywhere, and you may know it as a literary device. Repetition in design isn't rocket science, although it can be used in rocket science. Repetition just means that your product has a consistent look and feel. Imagining opening up your computer apps and having a different color at the top bar every time. Or even think of the Dumbo Octopus logo as orange.</p>
+				<p>While I do believe that you can get away with messing with the other concepts (except for contrast), repetition is one of the most important concepts in my opinion. You need to have a consistent look somehow, or the user will not have a familar feel with your product, and it won't feel right.</p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
